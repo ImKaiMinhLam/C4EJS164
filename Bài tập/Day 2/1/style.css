@@ -1,20 +1,35 @@
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: "Delius", cursive;
+}
+
 .container {
     width: 80%;
     margin: auto;
     font-family: Arial, sans-serif;
 }
 
+.navbar {
+    margin: -8px;
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+}
+
 .leftnav a, .rightnav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
 
 .rightnav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: -15px;
+    margin-top: -25px;
 }
 
 .dropdown {
@@ -24,11 +39,11 @@
 }
 
 .dropbtn {
-    background: #fff;
+    background: transparent;
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
-    color: #333;
+    color: #ffffff;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -36,9 +51,10 @@
 
 .dropdown-content {
     display: none;
+    align-items: center;
     position: absolute;
     right: 0;
-    top: calc(100% + 6px);
+    top: calc(100% + 1px);
     background: #fff;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.12);
@@ -66,7 +82,23 @@
 }
 
 .searchbar {
-    
+    width: 500px;
+    padding: 10px 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.searchbtn {
+    padding: 10px 15px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 0;
 }
 
 .mainnav {
@@ -75,4 +107,9 @@
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #e6e6e6;
+}
+
+.searchnav {
+    padding-bottom: 30px;
+    padding-top: 10px;
 }
