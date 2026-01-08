@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffff;
+    overflow-x: hidden;
+}
+
+.container{
+    width:90%;
+    max-width: 1200px;
+    height: 90%;
+    position: relative; /* Dat position relative de chua phan tu con vi tri tuyet doi */
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+/* Phan hinh tron */
+.image-container{
+    position: fixed;
+    top: 3vw;
+    right: 1vw;
+    width: 15vw;
+    height: 15vw;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    z-index: 0;
+}
+
+.circle{
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle.large{
+    width: 100%;
+    height: 100%;
+    background-color: #f7e9dc;
+    box-shadow: black 0px 5px 15px;
+}
+
+.circle.small{
+    width: 65%;
+    height: 65%;
+    background-color: #ffffff;
+    top:50%;
+    left: 35%;
+    z-index: 0;
+    position: absolute;
+}
+
+.circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Phan mau vang */
+.middle-section{
+    width: 70%;
+    max-width: 900px;
+    height: 80px;
+    background-color: #eedcc7;
+    position: fixed;
+    bottom: calc(40vh - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.text {
+    font-size: 2.2rem;
+    color: rgb(3, 1, 0);
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Phần màu nâu đen */
+.bottom-section {
+    background-color: #2f2a2a;
+    width: 100%;
+    height: 40vh;
+    max-height: 350px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Modal overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Phần Hình Tròn -->
+        <div class="image-container">
+            <div class="circle large">
+                <img src="./z7407689812387_5836b79d71b3d473382bbc9a1cd19e37.jpg" alt="">
+            </div>
+            <div class="circle small">
+                <img src="./z7407689812369_b2625b431609a14b507b02e0e74133eb.jpg" alt="">
+            </div>
+        </div>
+        <!-- Phần màu vàng -->
+         <div class="middle-section">
+            <p class="text" onClick="openModal()">Send Feedback</p>
+         </div>
+    </div>
+    <!-- Phần Màu Nâu Đen -->
+     <div class="bottom-section"></div>
+
+     <!-- Modal Popup -->
+      <div class="modal-overlay" id="modalOverlay" onClick="closeModal()">
+        <div class="modal" onClick="event.stopPropagation()">
+            <div class="modal-header">
+                <span class="close-btn" onClick="closeModal()">&times;</span>
+            </div>
+            <div>
+                <img src="./z7407689812386_6298c8ed37b0b5145b668dc1efb09d7a.jpg" alt="">
+            </div>
+            <div class="modal-content">
+                <h2>Send Feedback!</h2>
+                <p>Leave your feedback here.</p>
+                <input type="text" placeholder="Type text please...">
+                <button class="submit-btn" onClick="closeModal()">Yeah, thanks</button>
+            </div>
+        </div>
+      </div>
+      <script>
+        function openModal() {
+            document.getElementById('modalOverlay').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+        }
+      </script>
+</body>
+
+</html>
